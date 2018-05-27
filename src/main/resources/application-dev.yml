@@ -1,0 +1,19 @@
+server:
+  port: 8082  #默认为8080
+  servlet:
+    context-path: /girl #冒号后有空格
+
+#logging:
+#  level:
+#    org:
+#      springframework: DEBUG
+
+cupSize: F
+age: 20
+xiaoHong: "cupSize:${cupSize},age:${age}" #引用其他配置变量
+
+
+girl:
+  cupSize: ${cupSize}
+  age: ${age}
+

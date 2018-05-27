@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+
+  datasource: #数据源
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot
+    username: root
+    password: 123456
+
+  jpa:  #对象持久化标准
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect   #数据引擎InnoDB以支持事务
+
+  resources:
+    static-locations: classpath:/public/ #静态资源路径

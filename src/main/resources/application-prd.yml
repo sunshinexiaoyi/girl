@@ -1,0 +1,13 @@
+server:
+  port: 8082  #默认为8080
+  servlet:
+    context-path: /girl #冒号后有空格
+
+cupSize: B
+age: 18
+xiaoHong: "cupSize:${cupSize},age:${age}" #引用其他配置变量
+
+
+girl:
+  cupSize: ${cupSize}
+  age: ${age}
